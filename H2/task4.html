@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=scr, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       
+       let a = +prompt('Enter the length of the first side of the triangle','');
+       let b = +prompt('Enter the length of the second side of the triangle','');
+       let c = +prompt('Enter the length of the third side of the triangle','');
+       
+       if ( a == Number(a) && a > 0 && b == Number(b) && b > 0 && c == Number(c) && c > 0 ) {
+           console.log('correct data');
+       } else {
+           alert('Incorrect data');  
+       } 
+
+       let p = (a+b+c)/2;
+       let pl = Math.sqrt(p*(p-a)*(p-b)*(p-c)); 
+       alert(pl.toFixed(3));                           // a)
+
+       if (pl == a*b/2 || pl == a*c/2 || pl == c*b/2 ){
+           alert('triangle is rectangular');
+       } else {
+           alert('triangle is not rectangular');  
+       } 
+
+
+        </script>
+</body>
+</html>

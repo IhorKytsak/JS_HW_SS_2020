@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=scr, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script> 
+    //'Якщо вік менше 10 років вивести “Ви ще надто молоді”',якщо 10 в умові не опечатка , тоді умов більше ніж 2 і не вийде використовувати confirm(), а доречно буде використати prompt(). 
+    //    let  isAdult = prompt("Are you 18?",'');
+    //    if (isAdult >=18){
+    //        alert('Access confirmed!');
+    //    } else if (isAdult >=10 && isAdult < 18){
+    //        alert('Denied access!');
+    //    } else if (isAdult > 0 && isAdult < 10 ){
+    //        alert('You are still too young!');
+    //    } else {
+    //        alert('Wrong number');
+    //    }
+    
+    let  isAdult = confirm("Are you 18?");
+       if (isAdult === true){
+           alert('Access confirmed!');
+       } else {
+           alert('Denied access!');
+       } 
+        
+    </script>
+</body>
+</html>
