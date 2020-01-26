@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    function raiseToDegree(a,b) {
+     let result = a;
+        for (let i = 1; i < b; i++) {
+        result *= a;
+        }
+     return result;
+    }
+    let a = prompt("a?", '');
+    let b = prompt("b?", '');
+
+    if ((a ^ 0) == a && b >= 1 && (b ^ 0) == b && a && b) {     // перевірка чи числа цілі , чи b натуральне
+        alert( raiseToDegree(a,b) );  
+    }else{
+        alert('Числа a i b введені невірно');
+    }
+
+    </script>
+</body>
+</html>

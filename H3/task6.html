@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+    function upperCase(str) {
+     let splits = str.split(" ");
+     let stringFinal = "";
+
+     for (let i = 0; i < splits.length; i++) {
+        let Name = splits[i];
+        let First = Name.substring(0, 1).toUpperCase();
+        let Leftovers = Name.substring(1, Name.length)
+        stringFinal += First + Leftovers + " ";
+     }
+
+     console.log(stringFinal);
+    }
+    upperCase('i love java script');
+    upperCase('я люблю джава скріпт');
+
+    </script>
+</body>
+</html>
