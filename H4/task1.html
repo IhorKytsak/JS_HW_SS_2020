@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    let mentor = { 
+            course: "JS fundamental", 
+            duration: 3,
+            direction: "web-development" 
+        };
+    let student = { 
+            course: "JS fundamental", 
+            age: 23, 
+        };
+    function propsCounte(currentObject) {
+         let incr = 0 ;
+
+        for (let key in currentObject) {
+            incr++;
+        }
+
+        alert( "Всього властивостей: " + incr );
+    }
+
+    propsCounte(mentor);
+    propsCounte(student);
+
+    </script>
+</body>
+</html>
