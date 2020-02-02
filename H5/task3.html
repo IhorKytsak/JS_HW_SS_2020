@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+   
+   function checkAge(){
+   try {
+    let age = prompt('Enter your age?', )
+       if(!age || age == 0 ){
+           throw new Error('The field is empty! Please enter your age');
+       } 
+       else if(age != Number(age) ){
+           throw new Error('The field is not a number! Please enter your age');
+       } 
+       else if(age < 14){
+           throw new Error('Your age is less than 14! ');
+       } else {
+           alert ('@@@@@@Enjoyable viewing@@@@@@');
+       }              
+   } catch (error) {
+       alert(error);
+   }
+   }
+   
+   checkAge();
+
+   </script> 
+</body>
+</html>
