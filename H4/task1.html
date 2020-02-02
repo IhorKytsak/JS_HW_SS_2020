@@ -27,9 +27,13 @@
 
         alert( "Всього властивостей: " + incr );
     }
+    function count(currentObject) { 
+    return Object.keys(currentObject).length;
+  }
 
     propsCounte(mentor);
     propsCounte(student);
+    alert(count(mentor));
 
     </script>
 </body>

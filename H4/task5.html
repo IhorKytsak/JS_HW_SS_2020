@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    class GeometricFigure {
+		getArea() {
+	        return 0;
+        }
+        toString() {
+            return Object.getPrototypeOf(this).constructor.name;
+        }
+     }
+    
+    class Triangle extends GeometricFigure{
+        constructor(height,side){
+            super();
+            this.height = height;
+            this.side = side;
+
+        } 
+        getArea(){
+            let triangleArea = (this.height * this.side / 2);
+            return triangleArea ;
+        }
+    }
+    
+    class Square extends GeometricFigure{
+        constructor(side){
+            super();
+            this.side = side;
+        }
+        getArea(){
+            let squareArea = (this.side * this.side);
+            return squareArea ;
+        }      
+    }
+
+    class Circle extends GeometricFigure{
+        constructor(radius){
+            super();
+            this.radius = radius;
+        }
+        getArea(){
+            return ( Math.PI * this.radius ** 2);
+        }      
+    }
+
+    const figures = [new Triangle(5, 8), new Square(10), new Circle(7)];
+
+    function handleFigures(figures){
+        let totalArea = 0;
+        for (let k of figures) {
+            totalArea += k.getArea() ;
+            console.log(`GeometricFigure: ${k.toString()} -area: ${k.getArea()}`);   
+        }  
+        console.log(`Total area:${totalArea}`);
+       
+    } 
+    
+    handleFigures(figures);
+    
+    </script>
+</body>
+</html>

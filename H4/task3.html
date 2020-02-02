@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+    class Worker {
+        constructor(fullName,dayRate,workingDays){
+            this.fullName = fullName;
+            this.dayRate = dayRate;
+            this.workingDays = workingDays;
+        }
+        
+        #experience = 1.2;
+        showExp = this.#experience
+    
+        showSalary(){
+            let salary = (this.dayRate * this.workingDays);
+            return console.log(`${this.fullName} salary: ${salary}`);
+        }
+        showSalaryWithExperience(){
+            
+            let salaryWithExperience = (this.dayRate * this.workingDays * this.showExp);
+            return console.log(`${this.fullName} salary: ${salaryWithExperience}`);
+        }
+       
+        get setExp() {
+        return (this._setExp);
+        }
+        set setExp(value) {
+            this.showExp = value;
+        return (this._setExp);
+        }
+        
+        showSalaryForSort(){
+            let showSalaryForSort = (this.dayRate * this.workingDays * this.showExp);
+            return showSalaryForSort;
+        }
+    }
+
+    let worker1 = new Worker("John Johnson", 20, 23);
+    console.log(worker1.fullName);                 
+    worker1.showSalary();
+    console.log("New experience: " + worker1.showExp);
+    worker1.showSalaryWithExperience();
+    worker1.setExp = 1.5;
+    console.log("New experience: " + worker1.showExp);
+    worker1.showSalaryWithExperience();
+
+    let worker2 = new Worker("Tom Tomson", 48, 22);
+    console.log(worker2.fullName);                 
+    worker2.showSalary();
+    console.log("New experience: " + worker2.showExp);
+    worker2.showSalaryWithExperience();
+    worker2.setExp = 1.5;
+    console.log("New experience: " + worker2.showExp);
+    worker2.showSalaryWithExperience();
+
+    let worker3 = new Worker("Andy Ander", 29, 23);
+    console.log(worker3.fullName);                 
+    worker3.showSalary();
+    console.log("New experience: " + worker3.showExp);
+    worker3.showSalaryWithExperience();
+    worker3.setExp = 1.5;
+    console.log("New experience: " + worker3.showExp);
+    worker3.showSalaryWithExperience();
+    
+    let arr = [ worker1 , worker2, worker3 ]
+    
+    function sortWorkers(a, b) {
+        if (a.dayRate > b.dayRate) 
+        return 1; 
+        if (a.showSalaryForSort() < b.showSalaryForSort()) 
+        return -1; 
+    }
+    
+    arr.sort(sortWorkers);
+    for (let k of arr) {
+        console.log( `${k.fullName}:${k.showSalaryForSort()}` );
+    } 
+
+    </script>
+</body>
+</html>
