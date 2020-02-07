@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>	
+    <ul id="list">
+     <li>1</li>
+     <li>2</li>
+     <li>3</li>
+     <li>4</li>
+     <li>5</li>
+    </ul>
+
+ <script>
+   
+    // let elements = document.getElementById('list');
+    
+    // alert(elements.children[0].innerHTML);
+    // alert(elements.children[4].innerHTML);
+    // alert(elements.children[1].innerHTML);
+    // alert(elements.children[3].innerHTML);
+    // alert(elements.children[2].innerHTML);
+
+
+
+    
+
+    let elements = document.querySelectorAll('ul > li');
+    let arr = [];
+    let i = 0;
+   
+    for (let elem of elements) {
+        arr[i] = elem.innerHTML ;
+        i++
+        }
+
+    alert(arr[0]);
+    alert(arr[4]);
+    alert(arr[1]);
+    alert(arr[3]);
+    alert(arr[2]);
+
+ </script>   
+
+
+</body>
+
+</html>
