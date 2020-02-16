@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function svap(str) {
+            let regExp = / {1}/;
+            let result = str.split(regExp);
+            result =  `${result[1]}, ${result[0]}`;
+            console.log(result);
+        }    
+        svap('Hello man');
+        svap('Java Script');
+
+    </script> 
+</body>
+</html>

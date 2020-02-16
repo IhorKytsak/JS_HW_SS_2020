@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+
+       function upperCase(str){
+        let regExp = /(^[A-Z]).*/;   
+        let result = regExp.test(str);
+        if(result == true){
+           return console.log("String's starts with uppercase character");
+        }
+        console.log("String's not starts with uppercase character ");
+        }
+        upperCase('regexp');
+        upperCase('RegExp');
+        upperCase("dghrgggg");
+        upperCase("A");
+   </script>
+    
+
+</body>
+</html>

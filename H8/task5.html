@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkCard(str) {
+            let regExp = /(\d{4}-\d{4}-\d{4}-\d{4})/;
+            let result = regExp.test(str);
+            if(result == false) {
+                return console.log(false);
+            }
+            console.log(true);
+        }                
+        checkCard('9999-9999-9999-9999');    //true
+        checkCard('0421-3214-1123-0000');    //true
+        checkCard('dsad-deee-9999-9999');    //false
+        checkCard('22222-2222-22-2222');     //false
+        checkCard('9999-2222');              //false
+
+
+    </script> 
+</body>
+</html>

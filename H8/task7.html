@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkLogin(login) {
+            let regExp = /^([a-z])(([a-z\d]){1,9})$/i;
+            let result = regExp.test(login);
+            let regExp2 = /[(\d.)]+/gi;
+            let result2 = login.match(regExp2);
+            console.log(result);
+            for(reg in result2) {
+                console.log(result2[reg]);
+            }     
+        }              
+
+        checkLogin('ee11ret3');
+        checkLogin('ee1*1ret3');
+        checkLogin('ee1*1.444re6454.3t3');
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function search(str) {
+            let regExp = /[dD]([bB]+)([dD])/;
+            let result = regExp.exec(str);
+            alert(result);
+        }    
+        search('cdbBdbsbz');                        // [dbBd,bB,d]
+        search('cdbbBBBBdbsbz');                    // [dbbBBBBd,bbBBB,d]
+        search('sdfadsfsdgljdfDdBbBbBDsfgmf.d');    // [dBbBbBD,BbBbB,D]
+        search('dBDfkd');                           // [dBD,B,D]
+    
+    </script> 
+</body>
+</html>

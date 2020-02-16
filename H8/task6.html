@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkEmail(email) {
+            let regExp = /^([a-z0-9])+[a-z0-9_]+-?[a-z0-9_]+@[a-z0-9]+\.([a-z]{2,4})$/i;;
+            let result = regExp.test(email);
+            if(result == false) {
+                return console.log('Email is not correct!');
+            }
+            console.log('Email is correct!');
+        }              
+        checkEmail('my_mail@gmail.com');   //Email is correct!
+        checkEmail('#my_mail@gmail.com');  //Email is not correct!
+        checkEmail('_mymail@i.ua');        //Email is not correct!
+        checkEmail('mY_ma-iL_@i.ua');      //Email is correct!
+        checkEmail('mym-ai-l@gmail.com');  //Email is not correct!
+
+        
+
+    </script>
+</body>
+</html>

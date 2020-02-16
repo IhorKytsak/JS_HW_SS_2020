@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function checkEmail(email) {
+            let regExp = /^([\w_\-\.])+\@([\w_\-\.])+\.([A-Za-z]{2,4})$/;  
+    //всі символи на різних позиціях  /[\w\.-_@]+/
+            let result = regExp.test(email);
+            if(result == false) {
+                return console.log(false);
+            }
+            console.log(true);
+        }              
+   
+        checkEmail("Qmail2@gmail.com");     //true
+        checkEmail("1232@rghjkk9755.RFa");  //true
+        checkEmail("m@a.co");               //true
+        checkEmail("Qmail2gmail.com");      //false
+        checkEmail("Qm@ail2gmail.com111s"); //false
+        checkEmail("@.com");                //false
+
+    </script>
+</body>
+</html>
