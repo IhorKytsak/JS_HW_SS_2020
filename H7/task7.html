@@ -1,0 +1,74 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+ <body>
+   <style>
+      #step2 select{
+      display:none;
+      }
+   
+    body{
+      width: 150px;
+      height: 100px;
+      border: 1px solid;
+    }
+   </style>  
+
+
+
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+      
+<select id="select1">
+  <option selected disabled>Select country</option>
+  <option value="select2_1">USA</option>
+  <option value="select2_2">Germany</option>
+  <option value="select2_3">Ukraine</option>
+  </select>
+  
+  <div id="step2">
+    <select id="select2_1">
+        <option selected>Nev-York</option> 
+        <option>Washington</option>
+        <option>Boston</option>
+        <option>Chikago</option>
+    </select>
+    <select id="select2_2">
+        <option selected disabled></option>
+        <option>Berlin</option> 
+        <option>Heilbronn</option>
+        <option>Amberg</option>
+        <option>Dortmund</option>
+    </select>
+    <select id="select2_3">
+        <option selected disabled></option>
+        <option>Lviv</option> 
+        <option>Kiev</option>
+        <option>Ternopil</option>
+        <option>Rivne</option>
+    </select>
+  </div>
+ <div id="selection"></div><div id="selection2"></div>
+    <script>
+      $('#select1').change(function(){
+        let val = $(this).val();
+        if($('#' + val).length){
+          $('#step2 select').hide();
+          $('#' + val).show();
+         
+        }  
+        let countrySelect = document.getElementById('select1');
+            let selection = document.getElementById("selection");
+            let selectedOption = countrySelect.options[countrySelect.selectedIndex];
+      
+         selection.textContent = selectedOption.text ; 
+      })
+      
+    </script>
+
+
+ </body>
+</html>

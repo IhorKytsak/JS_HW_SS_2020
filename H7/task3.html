@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+<div>
+    <button id = button1>Clic to make the page blue.</button>
+    <button id = button2>Double-Clic to make the page pink.</button>
+    <button id = button3>Clic and hold to make the page brown.</button>
+    <a id ="link1" href="https://www.google.com">Hover ocerto make page yellow</a>
+</div>
+    <script>
+
+        document.getElementById('button1').onclick = function() {
+            document.body.style.backgroundColor = 'blue';
+            }
+        
+        document.getElementById('button2').ondblclick = function(){
+            document.body.style.backgroundColor = 'pink';
+        }
+       
+       document.getElementById('button3').onmousedown = function() {
+            document.body.style.backgroundColor = 'brown';
+            }
+        document.getElementById('button3').onmouseup = function() {
+            document.body.style.backgroundColor = 'white';
+            }
+        
+        function linkMouseover(){
+            document.body.style.backgroundColor = 'yellow';
+        }
+        function linkMouseout(){
+            document.body.style.backgroundColor = 'white';
+        }
+        
+        link1.addEventListener("mouseover", linkMouseover);
+        link1.addEventListener("mouseout", linkMouseout);
+
+    </script>
+ 
+
+</body>
+</html>

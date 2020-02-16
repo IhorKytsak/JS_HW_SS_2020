@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+ <body>
+     <style>
+         textarea{
+            width: 200px;
+            height: 363px;
+            border: 1px solid;
+         }
+     </style> 
+    
+        <button id = "button">Live button!</button>
+        <p>
+            <textarea id="log"></textarea>
+        </p> 
+
+    <script>
+        function mousePressed(){
+            log.value += "I was pressed!\n";  
+        }
+        function mouseOver(){
+            log.value += "Mouse on me!\n";
+        }
+        function mouseOut(){
+            log.value += "Mouse is not on me!\n";
+        }
+        button.addEventListener("click", mousePressed);
+        button.addEventListener("mouseover",  mouseOver);
+        button.addEventListener("mouseout", mouseOut);
+    </script>
+
+
+ </body>
+</html>
