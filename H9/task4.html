@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.4.1.js"></script>
+</head>
+<body>
+        <input type="checkbox">
+        <input type="checkbox"> 
+        <input type="checkbox"> 
+        <input type="checkbox">
+        <input type="checkbox">
+        <input type="checkbox">
+   
+       <script>
+            function checkBox() {
+                
+                let $checkBox = $(":checkbox:checked");
+                
+                if ($checkBox.length == 3) {
+                    $(":checkbox").attr("disabled", "true");
+                }
+            }
+            
+            $(":checkbox").on("click", checkBox);
+        </script>
+
+           
+
+            <!-- <script>    //Без використання jQuery   </script> 
+        
+        
+        <input class="checkbox1" type="checkbox" onchange="calc()">
+        <input class="checkbox1" type="checkbox" onchange="calc()"> 
+        <input class="checkbox1" type="checkbox" onchange="calc()"> 
+        <input class="checkbox1" type="checkbox" onchange="calc()">
+        <input class="checkbox1" type="checkbox" onchange="calc()">
+        <input class="checkbox1" type="checkbox" onchange="calc()">
+        <script>
+
+           function calc(){
+
+            let counter = 0;
+
+            let checkboxCheck = document.getElementsByClassName('checkbox1');
+
+            for (let i = 0; i < 6; i++){
+                if(checkboxCheck[i].checked){
+                    counter++;
+                }
+            }
+
+            if(counter >= 3) {
+
+                let x = document.getElementsByClassName('checkbox1');
+                for (let i = 0; i < 6; i++){
+                        x[i].disabled = true;
+                }
+            }
+           }
+      
+       </script> -->
+       
+
+</body>
+</html>
