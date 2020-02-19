@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+        function mul(...rest) {
+            let restArr = rest.slice(",");
+            let arrNumbers = [];
+            let sumNum = 0;
+            
+            for (let i = 0; i < rest.length; i++) {
+            
+                if (Number(restArr[i]) && restArr[i] != null && restArr[i] !== true) {
+                    arrNumbers.push(restArr[i]);
+                    function sumN(a, b) {
+                    return a + b;
+                    } 
+                    sumNum = arrNumbers.reduce(sumN);
+                }
+            }
+
+            if (sumNum === undefined) {
+                console.log(sumNum); 
+            }
+
+            console.log(sumNum);
+        }
+
+mul(1, "str", 2, 3, true);                  //6
+mul(null, "str", false, true);              //0
+mul(55, "str", 24, 31, true, 15 ,' ', 0);   //125
+mul();                                      //0
+
+    </script>
+</body>
+</html>
