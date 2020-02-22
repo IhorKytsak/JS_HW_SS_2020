@@ -6,7 +6,7 @@
         <title>Document</title>
     </head>
  <body>
-   <style>
+   <!-- <style>
       #step2 select{
       display:none;
       }
@@ -16,10 +16,9 @@
       height: 100px;
       border: 1px solid;
     }
-   </style>  
+   </style>   -->
 
-
-
+<!-- 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
       
 <select id="select1">
@@ -65,9 +64,90 @@
             let selectedOption = countrySelect.options[countrySelect.selectedIndex];
       
          selection.textContent = selectedOption.text ; 
-      })
+      }) -->
       
+      <select id='countries'>
+        <option class='USA'>USA</option>
+        <option class='Ukraine'>Ukraine</option>
+        <option class='Germany'>Germany</option>
+    </select>
+        
+    <select id='cities'>
+        <option default></option>
+        <option class='USAC'>Washington</option>
+        <option class='USAC'>New-York</option>
+        <option class='USAC'>Boston</option>
+        <option class='USAC'>Chikago</option>
+        <option class='UkraineC'>Lviv</option>
+        <option class='UkraineC'>Kyiv</option>
+        <option class='UkraineC'>Ternopil</option>
+        <option class='UkraineC'>Rivne</option>
+        <option class='GermanyC'>Berlin</option>
+        <option class='GermanyC'>Heilbronn</option>
+        <option class='GermanyC'>Amberg</option>
+        <option class='GermanyC'>Dortmund</option>
+    </select>
+
+    <p id='text'></p>
+
+    <script>
+
+        let country, city;
+
+        function chooseCountry(){   
+
+            for ( let cntr of countries.children ){     
+                if( !cntr.selected )
+                    continue;
+                else country = cntr;
+            }
+
+            for( let cntr of cities.children ){
+
+                if( country.classList.contains('USA') ){
+
+                    if( cntr.classList.contains('USAC') ){      
+                        cntr.hidden = false;
+                        cntr.selected = true;
+                    } else cntr.hidden = true;
+                }
+
+                if( country.classList.contains('Ukraine') ){
+
+                    if( cntr.classList.contains('UkraineC') ){ 
+                        cntr.hidden = false;
+                        cntr.selected = true;
+                    } else cntr.hidden = true;
+                }
+
+                if( country.classList.contains('Germany') ){
+
+                    if( cntr.classList.contains('GermanyC') ){ 
+                        cntr.hidden = false;
+                        cntr.selected = true;
+                    } else cntr.hidden = true;
+                }
+            }
+            text.innerHTML = `${country.innerHTML}`;
+        }
+
+        function chooseCity(){
+
+                for( let cts of cities.children ){ 
+
+                    if( cts.selected ){
+                        city = cts;
+                    }
+                }
+
+                text.innerHTML = `${country.innerHTML}, ${city.innerHTML}`; 
+        }
+        
+        countries.addEventListener('click', chooseCountry);
+        cities.addEventListener('click', chooseCity);    
+
     </script>
+    
 
 
  </body>
